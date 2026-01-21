@@ -1,0 +1,68 @@
+/* Structure */
+body {
+    font-family: 'Trebuchet', sans-serif;
+    background-color: #e3f2fd; 
+    color: #1a237e;
+    margin: 0;
+    padding: 20px;
+    Line-height: 1.6;
+}
+
+/* Navigation */ 
+
+/* Tables */ 
+
+/* Typography */
+h1 {
+    font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', cursive;
+    color: #0d47a1;
+    text-align: center;
+    font-size:3em;
+    margin-bottom: 10px; 
+    
+}
+
+h2 { 
+    font-family: sans-serif;
+    color: #1976d2;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 15px; 
+}
+
+p {
+    font-family: sans-serif; 
+    font-size:1.1em; 
+    color:#0d47a1; 
+    margin: 20px 0;
+}
+
+img {
+    display: block;
+    margin: 20px auto; 
+    max-width: 100%;
+    height: auto; 
+    padding: 12 px; 
+    background-color: white; 
+}
+
+table {
+    width: 100%; 
+    margin: 30px auto; 
+    background-color: #e1f5fe;
+    border: 3px solid #0277bd; 
+}
+
+th {
+    background-color: #2196f3;
+    color: white;
+    padding: 15px; 
+    text-align: Left;
+    font-size: 1.2em; 
+    border: 2px solid #0d47a1
+}
+
+td {
+    padding: 12px 15px;
+    border: 1px solid #81d4fa; 
+}
