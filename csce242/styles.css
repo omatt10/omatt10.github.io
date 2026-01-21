@@ -1,3 +1,80 @@
+/*
+    CSCE242 
+    Olivia Matthews 
+    Assignment 2 
+*/
+
+/* The body*/
 body {
-    background: green; 
+    background-color: #6A8C69; 
+    font-family: 'Trebuchet MS', 'Verdana', sans-serif;
+    color: #024554;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.8;
+}
+/* Main Header */
+h1 {
+    font-family: 'Arial Rounded MT Bold', sans-serif;
+    color: #c2c0a6;
+    margin: 0;
+    padding: 20px;
+    Line-height: 2.0;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0,0.4);
+}
+/* Header 5*/
+h2 {
+    font-family:'Copperplate', sans-serif;
+    color: #c2c0a6;
+    margin: 0; 
+    padding: 15px; 
+    line-height: 1.6;
+}
+/* Header 4*/
+h3 {
+    font-family:'Copperplate', sans-serif; 
+    color:#c2c0a6;
+    margin: 0;
+    padding:15px; 
+    line-height: 1.6;
+}
+/* Header 3*/
+h3 {
+    font-family: 'Copperplate', sans-serif; 
+    color:#c2c0a6; 
+    margin: 0;
+    padding:15px; 
+    line-height: 1.6;
+}
+
+/* Short way to list link using div*/
+#github-link {
+    color: #A8B545;
+    text-align: left;
+    text-decoration: none;
+}
+
+/*Unvisted Link*/
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+/*Visted Link*/
+a:visited {
+    color: purple; 
+    text-decoration: none;
+}
+
+/*Hover*/
+a:hover {
+    color: red;
+    text-decoration: none; 
+}
+
+/* Active state */ 
+a:active {
+    color:orange; 
+    text-decoration: none;
 }
