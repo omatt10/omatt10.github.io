@@ -5,21 +5,23 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body> 
-      <div id="content">
+      <div id="main-content">
         <header id="main-header"> 
-            <h1>Heading 1</h1>
+            <h1>Page Layout</h1>
             <nav id="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Picture</a></li>
                     <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Location</a></li>
                 </ul>
             </nav>
         </header>
-        <main id="page-content">
-            <h2>Header 2</h2>
-            <section class="content-selection"> 
+        <main id="content">
+            <h2>Main Content</h2>
+            <div class="flex-container">
+            <section class="col1of2 column"> 
                <h3>First section</h3>
                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. 
                  Quisque faucibus ex sapien vitae pellentesque sem placerat. 
@@ -30,18 +32,52 @@
                  aptent taciti sociosqu. Ad litora torquent per conubia nostra
                  inceptos himenaeos. 
                 </p>
+                <div class="flex-container">
+                    <section class="col1of3 column">
+                        <h4>Column 1</h4>
+                    </section>
+                    <section class="col1of3 column">
+                        <h4>Column 2</h4>
+                    </section>
+                    <section class="col1of3 column">
+                        <h4>Column 3</h4>
+                    </section>
+                </div>
             </section>
             <section class="content-selection">
-                <h3>Section 2</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                     Consectetur adipiscing elit quisque faucibus ex sapien 
-                     vitae. Ex sapien vitae pellentesque sem placerat in id.
-                     Placerat in id cursus mi pretium tellus duis. Pretium 
-                     tellus duis convallis tempus leo eu aenean. 
+                <h3>Second section</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. 
+                 Quisque faucibus ex sapien vitae pellentesque sem placerat. 
+                 In id cursus mi pretium tellus duis convallis. Tempus leo eu 
+                 aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus
+                 nec metus bibendum egestas. Iaculis massa nisl malesuada 
+                 lacinia integer nunc posuere. Ut hendrerit semper vel class 
+                 aptent taciti sociosqu. Ad litora torquent per conubia nostra
+                 inceptos himenaeos.
                 </p>
+                <div class="flex-container">
+                    <section class="col1of3 column">
+                        <h4>Column 1</h4>
+                    </section>
+                    <section class="col2of3 column">
+                        <h4>Column 2</h4>
+                    </section>
+                </div>
             </section>
+            </div>
+            <div class="flex-container">
+                <div class="col1of4 column">
+                    <h3>First column</h3>
+                </div>
+                <div class="col1of4 column">
+                    <h3>Second column</h3>
+                </div>
+                <div class="col2of4 column">
+                    <h3>Third column</h3>
+                </div>
+            </div>
         </main>
-        <footer id="main-footer"><p>@copy; omatt10.com</p> </footer>
+        <footer id="main-footer"><p>goodbye!</p> </footer>
       </div>
     </body>
 </html>
