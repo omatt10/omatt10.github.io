@@ -22,6 +22,7 @@ dateInput.addEventListener('change', function() {
 });
 
 //image - add colorful frame when clicked
+//I like java more than dealing with css so this is how I did the border
 const imageColumn = document.getElementById("imageColumn");
 const sunImage = document.getElementById("sun");
 
@@ -35,4 +36,5 @@ if (imageColumn && sunImage) {
     };
 } else {
     console.error("Cannot find imageColumn or sun element!");
+    //maybe overkill but just helped me when debugging
 }

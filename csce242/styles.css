@@ -1,7 +1,6 @@
 /*
     CSCE242 
-    Olivia Matthews 
-    Assignment 2 
+    Olivia Matthews  
 */
 
 /*Typeology*/ 
@@ -155,6 +154,47 @@ footer {
     padding: 20px;  
 }
 
+#projects {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+}
+
+/*using FlexBox*/ 
+.projects {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+
+/* styles for class project*/ 
+.project {
+    /* base width can grow or shrink*/ 
+    flex: 1 1 150px; 
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.project img {
+    width: 100%; 
+    height: auto; 
+    display: block;
+}
+
+/* project paragraphs*/ 
+.project p {
+    color: #666;
+    padding: 0 15px 15px 15px;
+    margin: 0;
+}
+
+/* project list*/
+.project li {
+    list-style:none; 
+    padding:10px 15px;
+    margin: 0;
+}
+
 /* Media Query for small screens*/ 
 @media (max-width: 786px) {
     #assignments {
@@ -166,6 +206,18 @@ footer {
     }
 
     .assignment {
+        flex: 1 1 100%; 
+    }
+
+    #projects {
+        flex-direction: column;
+    }
+
+    .projects {
+        flex-direction: column;
+    }
+
+    .project {
         flex: 1 1 100%; 
     }
 }
