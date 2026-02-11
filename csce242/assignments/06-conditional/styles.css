@@ -1,0 +1,137 @@
+/*Structure*/
+:root {
+  --main-background: white;
+  --secondary-color: blue;
+  --front-color:white;
+}
+
+body {
+  text-align: center;
+  font-family: 'Arial', monospace;
+}
+
+.subtitle {
+    font-weight: bold;
+}
+
+.nav-buttons {
+  margin: 20px;
+}
+
+.section {
+  margin: 30px auto;
+}
+
+/*Toggle*/
+.mobile-menu {
+  display: none;
+  max-width: 200px;
+  margin: 20px auto;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  color: black;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.menu-items {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 6px;
+}
+
+.menu-items li:hover {
+  cursor: pointer;
+}
+
+.menu-items li:last-child {
+  border-bottom: none;
+}
+
+/*media for mobile*/
+@media (max-width: 600px) {
+  .mobile-menu {
+    display: block;
+  }
+
+  .horizontal-nav {
+    display: none;
+  }
+}
+
+/*Navigation*/
+.horizontal-nav {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.horizontal-nav li {
+  text-align: center;
+  padding: 12px;
+  margin: 0 10px;
+  color: black;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Pipe after each item except last */
+.horizontal-nav li:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: -12px;
+}
+
+/* Hover effect */
+.horizontal-nav li:hover {
+cursor: pointer;
+}
+
+/*Class*/
+.class-container {
+  width: 500px;
+  height: 200px;
+  margin: auto;
+  overflow: hidden;
+  border: 1px solid black;
+  position: relative;
+}
+
+#class {
+  width: 80px;
+  position: absolute;
+  left: 0;
+  top: 150px;
+}
+
+.time-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.time-controls input {
+  margin-bottom: 10px;
+}
+
+.button-row button {
+  margin: 5px;
+}
+
+@media (max-width: 600px) {
+  .horizontal-nav {
+    display: none;
+  }
+}
