@@ -1,21 +1,17 @@
 /*Structure*/
 :root {
   --main-background: white;
-  --secondary-color: blue;
-  --front-color:white;
+  --secondary-color: green;
+  --front-color: white;
 }
 
 body {
   text-align: center;
-  font-family: 'Arial', monospace;
+  font-family: "Arial", monospace;
 }
 
 .subtitle {
-    font-weight: bold;
-}
-
-.nav-buttons {
-  margin: 20px;
+  font-weight: bold;
 }
 
 .section {
@@ -54,17 +50,6 @@ body {
   border-bottom: none;
 }
 
-/*media for mobile*/
-@media (max-width: 600px) {
-  .mobile-menu {
-    display: block;
-  }
-
-  .horizontal-nav {
-    display: none;
-  }
-}
-
 /*Navigation*/
 .horizontal-nav {
   list-style: none;
@@ -94,7 +79,7 @@ body {
 
 /* Hover effect */
 .horizontal-nav li:hover {
-cursor: pointer;
+  cursor: pointer;
 }
 
 /*Class*/
@@ -107,30 +92,20 @@ cursor: pointer;
   position: relative;
 }
 
-#class {
-  width: 80px;
-  position: absolute;
-  left: 0;
-  top: 150px;
+/* Display slider value */
+#sliderValue {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin: 10px 0;
 }
 
-.time-controls {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.time-controls input {
-  margin-bottom: 10px;
-}
-
-.button-row button {
-  margin: 5px;
-}
-
+/*media for mobile*/
 @media (max-width: 600px) {
+  .mobile-menu {
+    display: block;
+  }
+
   .horizontal-nav {
     display: none;
   }

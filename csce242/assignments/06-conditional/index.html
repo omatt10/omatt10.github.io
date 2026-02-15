@@ -1,31 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <title>JavaScript: Conditionals</title>
-    <link rel="stylesheet" href="styles.css"/>
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <h1>Assignment 6</h1>
     <p class="subtitle">If Statements</p>
     <div class="mobile-menu">
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <div id="arrow">▼</div>
-        </div>
-        <ul class="menu-items" id="menuItems">
-            <li onclick="showSection('time-till')">Exercise 1</li>
-            <li onclick="showSection('countdown')">Exercise 2</li>
-        </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <div id="arrow">▼</div>
+      </div>
+      <ul class="menu-items" id="menuItems">
+        <li onclick="showSection('time')">Exercise 1</li>
+        <li onclick="showSection('countdown')">Exercise 2</li>
+      </ul>
     </div>
     <div class="horizontal-nav">
-        <li onclick="showSection('time-till')">Exercise 1</li>
-        <li onclick="showSection('countdown')">Exercise 2</li>
+      <li onclick="showSection('time')">Exercise 1</li>
+      <li onclick="showSection('countdown')">Exercise 2</li>
     </div>
     <div id="time" class="section">
-        <div class="class-container">
-            <h2>How many minutes to Class?</h2>
-            <input type="range" id="speedRange" min="1" max="60" />
+      <div class="class-container">
+        <h2>How many minutes to Class?</h2>
+        <input type="range" id="speedRange" min="1" max="60" value="30" />
+        <div id="sliderValue">30</div>
+        <div class="range-labels">
+          <span>0 -</span>
+          <span>60</span>
         </div>
+        <div id="timeMessage"></div>
+      </div>
     </div>
-    <script src="script.js"></script>
-</body>
+    <div id="countdown" class="section" style="display: none">
+      <div class="class-container">
+        <h2>Countdown to Class</h2>
+        <div id="currentTime"></div>
+        <div id="countdownMessage"></div>
+      </div>
+    </div>
+    <footer> 
+        <p>&copy2026 Olivia Matthews </p>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
 </html>
