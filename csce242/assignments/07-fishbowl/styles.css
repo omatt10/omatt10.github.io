@@ -1,0 +1,63 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0faff;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #006699;
+}
+
+/* Make the image area a positioned container */
+#container {
+  position: relative;
+  width: 520px;
+  margin: 40px auto 0;
+}
+
+/* Make image responsive inside container */
+#bubbles-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Bubble overlay ON TOP of image */
+#bubbles {
+  position: absolute;
+  top: 20%;
+  left: 6%;
+  width: 85%;
+  height: 70%;
+  overflow: hidden;
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+/* bubble style + animation */
+.bubble {
+  position: absolute;
+  bottom: -30px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.35) inset;
+  animation: rise linear infinite;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-420px);
+    opacity: 0;
+  }
+}

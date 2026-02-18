@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Core Metrics</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <img src="../images/logo.png" alt="Logo" />
+        <span>Core Metrics</span>
+      </div>
+      <nav>
+        <a href="calculator.html">Calculator</a>
+        <a href="exercise.html">Exercise</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="about-us.html">About Us</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section with Background -->
+    <section class="hero">
+      <!-- hero src -->
+      <img src="../images/hero.png" alt="Hero" class="hero-bg" />
+
+      <div class="hero-overlay">
+        <h1>Track Progress, See Change</h1>
+        <p>Enter your BMI to calculate to help you for the BMR calculator</p>
+        <button class="hero-btn">Calculate Core Metrics</button>
+      </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <div class="content-wrapper">
+      <!-- Left Sidebar -->
+      <aside class="sidebar">
+        <h3>Enter Your Info:</h3>
+        <p>Fill in the form below to calculate your BMI, body fat %, and BMR</p>
+
+        <div class="gender-toggle">
+          <button class="toggle-btn active">Female</button>
+          <button class="toggle-btn">Male</button>
+        </div>
+
+        <button class="calculate-btn">Calculate</button>
+      </aside>
+
+      <!-- Right Form Area -->
+      <div class="form-area">
+        <div class="form-group">
+          <label>Age: Enter your age</label>
+          <input type="number" placeholder="Enter age" />
+        </div>
+
+        <div class="form-group">
+          <label>Height: Enter your height</label>
+          <input type="number" placeholder="Enter height" />
+        </div>
+
+        <div class="form-group">
+          <label>Activity Level: Sedentary/Low Moderate/Very Active</label>
+          <select>
+            <option>Sedentary</option>
+            <option>Low Moderate</option>
+            <option>Very Active</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Metrics Cards Section -->
+    <section class="metrics">
+      <div class="card">
+        <h3>BMI</h3>
+        <div class="card-content">
+          <div class="metric-info">
+            <p class="big-number">23.5</p>
+            <p class="small-text">Based on weight and height</p>
+          </div>
+          <img
+            src="../images/bodyMassIndex.webp"
+            alt="BMI"
+            class="metric-icon"
+          />
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Body Fat %</h3>
+        <div class="card-content">
+          <div class="metric-info">
+            <p class="big-number">18.7%</p>
+            <p class="small-text">Based on weight and height</p>
+          </div>
+          <img
+            src="../images/body-fat-percentage.jpg"
+            alt="Body Fat"
+            class="metric-icon"
+          />
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>BMR</h3>
+        <div class="card-content">
+          <div class="metric-info">
+            <p class="big-number">1,758</p>
+            <p class="sub-text">kcal/day</p>
+            <p class="small-text">Based Metabolic Rate</p>
+          </div>
+          <img src="../images/BMR.webp" alt="BMR" class="metric-icon" />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
