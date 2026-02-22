@@ -1,9 +1,9 @@
 // Associative arrays — key: song name, value: YouTube embed URL
 const happy = {
   "West Savannah by Isaiah Rashad ft SZA":
-    "https://www.youtube.com/embed/vor0Oph03Fg",
+    "https://www.youtube-nocookie.com/embed/OZ29p5LYhZE",
   "Could You Be Loved by Bob Marley & The Wailers":
-    "https://www.youtube.com/embed/1ti2YCFgCoI",
+    "https://www.youtube-nocookie.com/embed/1ti2YCFgCoI",
   "Dance In The Dark by Rihanna":
     "https://www.youtube.com/embed/O1QVDIL12pU",
   "Dog Days Are Over by Florence + Machine":
