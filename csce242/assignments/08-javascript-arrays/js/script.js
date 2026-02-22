@@ -4,8 +4,7 @@ const happy = {
     "https://www.youtube.com/embed/OZ29p5LYhZE",
   "Could You Be Loved by Bob Marley & The Wailers":
     "https://www.youtube.com/embed/1ti2YCFgCoI",
-  "Dance In The Dark by Rihanna":
-    "https://www.youtube.com/embed/O1QVDIL12pU",
+  "Dance In The Dark by Rihanna": "https://www.youtube.com/embed/O1QVDIL12pU",
   "Dog Days Are Over by Florence + Machine":
     "https://www.youtube.com/embed/vDHr85LiwUM",
   "Rich Girl by Daryl Hall & John Oates":
@@ -13,16 +12,11 @@ const happy = {
 };
 
 const sad = {
-  "High No More":
-    "https://www.youtube.com/embed/AQqL3ViB5nI",
-  "I Drink Wine by Adele":
-    "https://www.youtube.com/embed/jDvYDzFOK9A",
-  "Cool About It by boygenius":
-    "https://www.youtube.com/embed/G-XICfi4j3Q",
-  "Who Knows by Dainel Ceaser":
-    "https://www.youtube.com/embed/Wzn4BLtE73o",
-  "Moon River by Frank Ocean":
-    "https://www.youtube.com/embed/mXiFHDfvn4A",
+  "High No More": "https://www.youtube.com/embed/AQqL3ViB5nI",
+  "I Drink Wine by Adele": "https://www.youtube.com/embed/jDvYDzFOK9A",
+  "Cool About It by boygenius": "https://www.youtube.com/embed/G-XICfi4j3Q",
+  "Who Knows by Dainel Ceaser": "https://www.youtube.com/embed/Wzn4BLtE73o",
+  "Moon River by Frank Ocean": "https://www.youtube.com/embed/mXiFHDfvn4A",
 };
 
 // Grab elements
