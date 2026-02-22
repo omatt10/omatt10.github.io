@@ -1,28 +1,28 @@
 // Associative arrays — key: song name, value: YouTube embed URL
 const happy = {
   "West Savannah by Isaiah Rashad ft SZA":
-    "https://www.youtube.com/embed/vor0Oph03Fg?si=_XH3uZm86fvImVqW",
+    "https://www.youtube.com/embed/vor0Oph03Fg",
   "Could You Be Loved by Bob Marley & The Wailers":
-    "https://www.youtube.com/embed/1ti2YCFgCoI?si=sCxuvm3Z_YUbwagn",
+    "https://www.youtube.com/embed/1ti2YCFgCoI",
   "Dance In The Dark by Rihanna":
-    "https://www.youtube.com/embed/O1QVDIL12pU?si=Efw5zPLgAXBxcNSA",
+    "https://www.youtube.com/embed/O1QVDIL12pU",
   "Dog Days Are Over by Florence + Machine":
-    "https://www.youtube.com/embed/vDHr85LiwUM?si=J5sj0LS020QRKPAt",
+    "https://www.youtube.com/embed/vDHr85LiwUM",
   "Rich Girl by Daryl Hall & John Oates":
-    "https://www.youtube.com/embed/AmHE65RAkSY?si=S4DbWsuqEoVnqIj6",
+    "https://www.youtube.com/embed/AmHE65RAkSY",
 };
 
 const sad = {
   "High No More":
-    "https://www.youtube.com/embed/AQqL3ViB5nI?si=RMRq7wpaIrJLBNJl",
+    "https://www.youtube.com/embed/AQqL3ViB5nI",
   "I Drink Wine by Adele":
-    "https://www.youtube.com/embed/jDvYDzFOK9A?si=hs31hv14PSvTtxv9",
+    "https://www.youtube.com/embed/jDvYDzFOK9A",
   "Cool About It by boygenius":
-    "https://www.youtube.com/embed/G-XICfi4j3Q?si=M5MJithVpriazasA",
+    "https://www.youtube.com/embed/G-XICfi4j3Q",
   "Who Knows by Dainel Ceaser":
-    "https://www.youtube.com/embed/Wzn4BLtE73o?si=dm6qDb4siUeV2egv",
+    "https://www.youtube.com/embed/Wzn4BLtE73o",
   "Moon River by Frank Ocean":
-    "https://www.youtube.com/embed/mXiFHDfvn4A?si=A38-ifd_r7OWBov7",
+    "https://www.youtube.com/embed/mXiFHDfvn4A",
 };
 
 // Grab elements
