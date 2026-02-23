@@ -7,11 +7,14 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="logo">
-            <img src="../images/project.png" alt="Logo">
+        <a href="index.html" class="logo">
+            <img src="../images/logo.png" alt="Logo">
             <span>Core Metrics</span>
-        </div>
-        <nav>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="main-nav">
             <a href="index.html">Home</a>
             <a href="calculator.html">Calculator</a>
             <a href="nutrition.html">Nutrition</a>
@@ -28,9 +31,19 @@
     <!-- Exercise Grid -->
     <section class="exercise-grid">
         <!-- Running -->
+        <a href="running-preview.html" class="exercise-card-link">
+            <div class="exercise-card">
+                <img src="../images/running.webp" alt="Running" class="exercise-image">
+                <div class="exercise-card-footer">
+                <h3>Running</h3>
+                </div>
+            </div>
+        </a>
+
+        <!-- Walking -->
         <div class="exercise-card">
-            <img src="../images/running.webp" alt="Running" class="exercise-image">
-            <h3>Running</h3>
+            <img src="../images/walking.webp" alt="Walking" class="exercise-image">
+            <h3>Walking</h3>
         </div>
 
         <!-- Swimming -->
@@ -39,18 +52,12 @@
             <h3>Swimming</h3>
         </div>
 
-        <!-- Walking -->
-        <div class="exercise-card">
-            <img src="../images/walking.webp" alt="Walking" class="exercise-image">
-            <h3>Walking</h3>
-        </div>
-
         <!-- Other Cardio -->
         <div class="exercise-card">
             <img src="../images/othercardio.png" alt="Other Cardio" class="exercise-image">
             <h3>Other Cardio</h3>
         </div>
     </section>
-
+    <script src="js/script.js"></script>
 </body>
 </html>

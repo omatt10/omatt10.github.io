@@ -22,6 +22,17 @@ body {
   color: var(--black);
 }
 
+/* Clickable logo*/
+a.logo {
+  text-decoration: none;
+  color:var(--blue);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: bold; 
+}
+
 /* Header */
 header {
   display: flex;
@@ -60,6 +71,37 @@ nav a {
 
 nav a:hover {
   color: var(--blue);
+}
+
+/* Nav Toggle Button */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin-left:auto;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: var(--black);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.nav-toggle.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 /* hero and overlay */
@@ -289,6 +331,7 @@ nav a:hover {
   text-align: center;
   padding: 60px 20px 40px;
   background: var(--light-blue);
+  width: 100%;
 }
 
 .page-header h1 {
@@ -317,13 +360,9 @@ nav a:hover {
   border-radius: 12px;
   padding: 30px;
   text-align: center;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
 }
 
 .calc-card:hover {
-  transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -362,8 +401,332 @@ nav a:hover {
   background: var(--dark-blue);
 }
 
-/* Media */
+/* Exercise Page Styles */
+.exercise-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 50px;
+}
 
+.exercise-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+}
+
+.exercise-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.exercise-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.exercise-card h3 {
+  font-size: 20px;
+  color: var(--blue);
+  padding: 20px;
+  font-weight: 600;
+}
+
+.exercise-card-link {
+  text-decoration: none;
+  color: inherit; 
+  display: block;
+}
+
+/* Nutrition Page Styles */
+.nutrition-hero {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+}
+
+.nutrition-hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.nutrition-hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  width:100%; 
+  transform: translate(-50%, -50%);
+}
+
+.nutrition-hero-overlay h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--black);
+
+}
+
+.nutrition-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 50px;
+}
+
+.nutrition-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.nutrition-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nutrition-card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.nutrition-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--black);
+  padding: 16px 20px 6px;
+}
+
+.nutrition-card p {
+  font-size: 13px;
+  color: var(--gray);
+  padding: 0 20px 12px;
+  line-height: 1.5;
+}
+
+.nutrition-link {
+  display: inline-block;
+  padding: 0 20px 20px;
+  font-size: 13px;
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nutrition-link:hover {
+  color: var(--dark-blue);
+}
+
+/* Nutrition Card Link */
+.nutrition-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.nutrition-card-link:hover .nutrition-card {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* About Page Styles */
+.about-hero {
+  background: var(--light-blue);
+  padding: 60px 50px 40px;
+}
+
+.about-hero h1 {
+  font-size: 42px;
+  font-weight: bold;
+  color: var(--black);
+}
+
+.about-mission {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 50px;
+  text-align: center;
+}
+
+.mission-text h2 {
+  font-size: 28px;
+  color: var(--blue);
+  margin-bottom: 15px;
+}
+
+.mission-text p {
+  font-size: 15px;
+  color: var(--gray);
+  line-height: 1.6;
+  max-width: 500px;
+  margin-bottom: 30px;
+  margin: 0 auto 30px;
+}
+
+.mission-img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.about-badges {
+  display: flex;
+  gap: 30px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  flex: 1;
+  min-width: 100px;
+}
+
+.badge img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.badge span {
+  font-size: 13px;
+  color: var(--gray);
+  font-weight: 600;
+}
+
+.about-goals {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  padding: 0 50px;
+}
+
+.about-goals h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--black);
+  margin-bottom: 15px;
+}
+
+.about-goals p {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 1.7;
+  max-width: 600px;
+}
+
+/* Footer */
+.about-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  border-top: 1px solid var(--border);
+  background: var(--white);
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.footer-links a:hover {
+  color: var(--blue);
+}
+
+.footer-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-icons img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.footer-social-img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.footer-social-img:hover {
+  opacity: 0.7;
+}
+
+/* Recipe List Page */
+.recipe-list-section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.recipe-list-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 25px 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-list-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.recipe-list-info h3 {
+  font-size: 18px;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+
+.recipe-list-info p {
+  font-size: 14px;
+  color: var(--gray);
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.recipe-list-macros {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.recipe-list-macros span {
+  font-size: 13px;
+  color: var(--gray);
+  background: var(--light-gray);
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+/* Media */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -404,5 +767,76 @@ nav a:hover {
   .calculator-grid {
     grid-template-columns: 1fr;
     padding: 40px 20px;
+  }
+
+  .exercise-grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    margin: 40px auto;
+  }
+  .nutrition-hero {
+    height: 220px;
+  }
+
+  .nutrition-hero-overlay h1 {
+    font-size: 32px;
+  }
+
+  .nutrition-grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    margin: 40px auto;
+  }
+
+  .about-hero {
+    padding: 40px 20px;
+  }
+
+  .about-mission,
+  .about-goals {
+    padding: 0 20px;
+    margin: 40px auto;
+  }
+
+  .about-badges {
+    gap: 20px;
+  }
+
+  .about-footer {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  #main-nav {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    gap: 15px;
+    z-index: 99;
+  }
+
+  #main-nav.open {
+    display: flex;
+  }
+
+  .recipe-list-section {
+    padding: 0 20px;
+    margin: 40px auto;
+  }
+
+  .recipe-list-macros {
+    gap: 10px;
   }
 }
