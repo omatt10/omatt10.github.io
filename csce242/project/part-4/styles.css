@@ -25,12 +25,12 @@ body {
 /* Clickable logo*/
 a.logo {
   text-decoration: none;
-  color:var(--blue);
+  color: var(--blue);
   display: flex;
   align-items: center;
   gap: 10px;
   font-size: 22px;
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 /* Header */
@@ -82,7 +82,7 @@ nav a:hover {
   border: none;
   cursor: pointer;
   padding: 5px;
-  margin-left:auto;
+  margin-left: auto;
 }
 
 .nav-toggle span {
@@ -439,7 +439,7 @@ nav a:hover {
 
 .exercise-card-link {
   text-decoration: none;
-  color: inherit; 
+  color: inherit;
   display: block;
 }
 
@@ -462,7 +462,7 @@ nav a:hover {
   top: 50%;
   left: 50%;
   text-align: center;
-  width:100%; 
+  width: 100%;
   transform: translate(-50%, -50%);
 }
 
@@ -470,7 +470,6 @@ nav a:hover {
   font-size: 48px;
   font-weight: bold;
   color: var(--black);
-
 }
 
 .nutrition-grid {
@@ -538,7 +537,6 @@ nav a:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
-
 
 /* About Page Styles */
 .about-hero {
@@ -691,7 +689,9 @@ nav a:hover {
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 25px 30px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .recipe-list-card:hover {
@@ -822,7 +822,7 @@ nav a:hover {
     background: var(--white);
     flex-direction: column;
     padding: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     gap: 15px;
     z-index: 99;
   }

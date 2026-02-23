@@ -1,65 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <title>Nutrition - Core Metrics</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <title>Nutrition - Core Metrics</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <a href="index.html" class="logo">
+        <img src="../images/logo.png" alt="Logo" />
+        <span>Core Metrics</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="about.html">About Us</a>
+      </nav>
+    </header>
 
-  <!-- Header -->
-  <header>
-    <a href="index.html" class="logo">
-            <img src="../images/logo.png" alt="Logo">
-            <span>Core Metrics</span>
-    </a>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
-    <nav id="main-nav">
-      <a href="index.html">Home</a>
-      <a href="calculator.html">Calculator</a>
-      <a href="nutrition.html">Nutrition</a>
-      <a href="about.html">About Us</a>
-    </nav>
-  </header>
+    <!-- Hero Banner -->
+    <section class="nutrition-hero">
+      <img src="../images/hero.png" alt="Nutrition" class="nutrition-hero-bg" />
+      <div class="nutrition-hero-overlay">
+        <h1>Nutrition Right</h1>
+      </div>
+    </section>
 
-  <!-- Hero Banner -->
-  <section class="nutrition-hero">
-    <img src="../images/hero.png" alt="Nutrition" class="nutrition-hero-bg">
-    <div class="nutrition-hero-overlay">
-      <h1>Nutrition Right</h1>
-    </div>
-  </section>
-
-  <!-- Nutrition Cards -->
-  <section class="nutrition-grid">
-
-    <!-- Recipes -->
-    <a href="recipes-preview.html" class="nutrition-card-link">
+    <!-- Nutrition Cards -->
+    <section class="nutrition-grid">
+      <!-- Recipes -->
+      <a href="recipes-preview.html" class="nutrition-card-link">
         <div class="nutrition-card">
-        <img src="../images/recipes.png" alt="Recipes" class="nutrition-card-img">
-        <h3>Recipes</h3>
-        <p>Find and explore healthy meals to reach your goals.</p>
-        <span class="nutrition-link">Click to see more →</span>
+          <img
+            src="../images/recipes.png"
+            alt="Recipes"
+            class="nutrition-card-img"
+          />
+          <h3>Recipes</h3>
+          <p>Find and explore healthy meals to reach your goals.</p>
+          <span class="nutrition-link">Click to see more →</span>
         </div>
-    </a>
-    <!-- Meal Planner -->
-    <div class="nutrition-card">
-      <img src="../images/meal planning.png" alt="Meal Planner" class="nutrition-card-img">
-      <h3>Meal Planner</h3>
-      <p>Plan your weekly meals to stay on track.</p>
-      <a href="#" class="nutrition-link">Click to see more →</a>
-    </div>
+      </a>
+      <!-- Meal Planner -->
+      <div class="nutrition-card">
+        <img
+          src="../images/meal planning.png"
+          alt="Meal Planner"
+          class="nutrition-card-img"
+        />
+        <h3>Meal Planner</h3>
+        <p>Plan your weekly meals to stay on track.</p>
+        <a href="#" class="nutrition-link">Click to see more →</a>
+      </div>
 
-    <!-- Macro Tracker -->
-    <div class="nutrition-card">
-      <img src="../images/macro log.png" alt="Macro Tracker" class="nutrition-card-img">
-      <h3>Macro Tracker</h3>
-      <p>Easily track the contents of macros.</p>
-      <a href="#" class="nutrition-link">Click to see more →</a>
-    </div>
-
-  </section>
-  <script src="js/script.js"></script>
-</body>
+      <!-- Macro Tracker -->
+      <div class="nutrition-card">
+        <img
+          src="../images/macro log.png"
+          alt="Macro Tracker"
+          class="nutrition-card-img"
+        />
+        <h3>Macro Tracker</h3>
+        <p>Easily track the contents of macros.</p>
+        <a href="#" class="nutrition-link">Click to see more →</a>
+      </div>
+    </section>
+    <script src="js/script.js"></script>
+  </body>
 </html>
