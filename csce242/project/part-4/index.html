@@ -15,6 +15,7 @@
         <span></span><span></span><span></span>
       </button>
       <nav id="main-nav">
+        <a href="index.html">Home</a>
         <a href="calculator.html">Calculator</a>
         <a href="exercise.html">Exercise</a>
         <a href="nutrition.html">Nutrition</a>
@@ -51,28 +52,30 @@
 
       <!-- Right Form Area -->
       <div class="form-area">
-        <div class="form-group">
-          <label>Age: Enter your age</label>
-          <input type="number" placeholder="Enter age" />
-        </div>
-
-        <div class="form-group">
-          <label>Height: Enter your height</label>
-          <input type="number" placeholder="Enter height" />
-        </div>
-
-        <div class="form-group">
-          <label>Activity Level: Sedentary/Low Moderate/Very Active</label>
-          <select>
-            <option>Sedentary</option>
-            <option>Low Moderate</option>
-            <option>Very Active</option>
-          </select>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Age</label>
+            <input type="number" placeholder="Enter age" />
+          </div>
+          <div class="form-group">
+            <label>Height (in)</label>
+            <input type="number" placeholder="Enter height" />
+          </div>
+          <div class="form-group">
+            <label>Weight (lbs)</label>
+            <input type="number" placeholder="Enter weight" />
+          </div>
+          <div class="form-group">
+            <label>Activity Level</label>
+            <select>
+              <option>Sedentary</option>
+              <option>Low Moderate</option>
+              <option>Very Active</option>
+            </select>
+          </div>
         </div>
       </div>
     </div>
-
-    <!-- Metrics Cards Section -->
     <section class="metrics">
       <div class="card">
         <h3>BMI</h3>
@@ -88,7 +91,6 @@
           />
         </div>
       </div>
-
       <div class="card">
         <h3>Body Fat %</h3>
         <div class="card-content">
@@ -103,14 +105,13 @@
           />
         </div>
       </div>
-
       <div class="card">
         <h3>BMR</h3>
         <div class="card-content">
           <div class="metric-info">
             <p class="big-number">1,758</p>
             <p class="sub-text">kcal/day</p>
-            <p class="small-text">Based Metabolic Rate</p>
+            <p class="small-text">Basal Metabolic Rate</p>
           </div>
           <img src="../images/BMR.webp" alt="BMR" class="metric-icon" />
         </div>

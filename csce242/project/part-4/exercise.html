@@ -17,6 +17,7 @@
       <nav id="main-nav">
         <a href="index.html">Home</a>
         <a href="calculator.html">Calculator</a>
+        <a href="exercise.html" class="active">Exercise</a>
         <a href="nutrition.html">Nutrition</a>
         <a href="about.html">About Us</a>
       </nav>
@@ -30,7 +31,6 @@
 
     <!-- Exercise Grid -->
     <section class="exercise-grid">
-      <!-- Running -->
       <a href="running-preview.html" class="exercise-card-link">
         <div class="exercise-card">
           <img
@@ -43,8 +43,6 @@
           </div>
         </div>
       </a>
-
-      <!-- Walking -->
       <div class="exercise-card">
         <img
           src="../images/walking.webp"
@@ -53,8 +51,6 @@
         />
         <h3>Walking</h3>
       </div>
-
-      <!-- Swimming -->
       <div class="exercise-card">
         <img
           src="../images/swimming.png"
@@ -63,8 +59,6 @@
         />
         <h3>Swimming</h3>
       </div>
-
-      <!-- Other Cardio -->
       <div class="exercise-card">
         <img
           src="../images/othercardio.png"
@@ -74,6 +68,70 @@
         <h3>Other Cardio</h3>
       </div>
     </section>
+    <!-- Lightbox Gallery Section -->
+    <section class="gallery-section">
+      <h2>Workout Gallery</h2>
+      <p>Click any image to view it in full screen</p>
+      <div class="gallery-grid">
+        <div
+          class="gallery-item"
+          onclick="openLightbox('../images/running.webp', 'Running')"
+        >
+          <img src="../images/running.webp" alt="Running" />
+          <div class="gallery-overlay"><span>Running</span></div>
+        </div>
+        <div
+          class="gallery-item"
+          onclick="openLightbox('../images/walking.webp', 'Walking')"
+        >
+          <img src="../images/walking.webp" alt="Walking" />
+          <div class="gallery-overlay"><span>Walking</span></div>
+        </div>
+        <div
+          class="gallery-item"
+          onclick="openLightbox('../images/swimming.png', 'Swimming')"
+        >
+          <img src="../images/swimming.png" alt="Swimming" />
+          <div class="gallery-overlay"><span>Swimming</span></div>
+        </div>
+        <div
+          class="gallery-item"
+          onclick="openLightbox('../images/othercardio.png', 'Other Cardio')"
+        >
+          <img src="../images/othercardio.png" alt="Other Cardio" />
+          <div class="gallery-overlay"><span>Other Cardio</span></div>
+        </div>
+        <div
+          class="gallery-item"
+          onclick="openLightbox('../images/bodyMassIndex.webp', 'BMI Tracking')"
+        >
+          <img src="../images/bodyMassIndex.webp" alt="BMI Tracking" />
+          <div class="gallery-overlay"><span>BMI Tracking</span></div>
+        </div>
+        <div
+          class="gallery-item"
+          onclick="openLightbox('../images/BMR.webp', 'BMR Monitoring')"
+        >
+          <img src="../images/BMR.webp" alt="BMR Monitoring" />
+          <div class="gallery-overlay"><span>BMR Monitoring</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+      <div class="lightbox-content">
+        <button class="lightbox-close" onclick="closeLightbox()">
+          &times;
+        </button>
+        <button class="lightbox-prev" onclick="changeImage(-1)">
+          &#10094;
+        </button>
+        <img id="lightbox-img" src="" alt="" />
+        <p id="lightbox-caption"></p>
+        <button class="lightbox-next" onclick="changeImage(1)">&#10095;</button>
+      </div>
+    </div>
     <script src="js/script.js"></script>
   </body>
 </html>

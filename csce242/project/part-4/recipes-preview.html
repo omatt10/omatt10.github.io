@@ -18,63 +18,157 @@
         <a href="index.html">Home</a>
         <a href="calculator.html">Calculator</a>
         <a href="exercise.html">Exercise</a>
+        <a href="nutrition.html">Nutrition</a>
         <a href="about.html">About Us</a>
       </nav>
     </header>
-
-    <!-- Page Header -->
     <section class="page-header">
       <h1>Healthy Recipes</h1>
       <p>Simple and nutritious meals to fuel your goals</p>
     </section>
 
-    <!-- Recipe List -->
     <section class="recipe-list-section">
-      <div class="recipe-list-card">
-        <div class="recipe-list-info">
-          <h3>Grilled Chicken & Veggie Bowl</h3>
-          <p>A high-protein bowl perfect for post-workout recovery.</p>
-          <div class="recipe-list-macros">
-            <span>520 cal</span>
-            <span>45g protein</span>
-            <span>38g carbs</span>
-            <span>14g fat</span>
+      <!-- Recipe 1 -->
+      <div class="recipe-list-card" onclick="toggleRecipe(this)">
+        <div class="recipe-list-main">
+          <img
+            src="../images/recipes.png"
+            alt="Grilled Chicken Bowl"
+            class="recipe-list-img"
+          />
+          <div class="recipe-list-info">
+            <h3>Grilled Chicken &amp; Veggie Bowl</h3>
+            <p>A high-protein bowl perfect for post-workout recovery.</p>
+            <div class="recipe-list-macros">
+              <span>520 cal</span>
+              <span>45g protein</span>
+              <span>38g carbs</span>
+              <span>14g fat</span>
+            </div>
+            <span class="recipe-expand-btn">View Recipe ↓</span>
           </div>
+        </div>
+        <div class="recipe-detail">
+          <h4>Ingredients</h4>
+          <p>
+            6 oz grilled chicken breast, 1 cup mixed veggies (bell pepper,
+            zucchini, broccoli), 1/2 cup brown rice, 1 tbsp olive oil, salt,
+            pepper, garlic powder.
+          </p>
+          <h4>Instructions</h4>
+          <p>
+            1. Season chicken with salt, pepper, and garlic powder. Grill for
+            6-7 min per side. 2. Sauté veggies in olive oil for 5 minutes. 3.
+            Serve over cooked brown rice.
+          </p>
+        </div>
+      </div>
+      
+
+      <!-- Recipe 2 -->
+      <div class="recipe-list-card" onclick="toggleRecipe(this)">
+        <div class="recipe-list-main">
+          <img
+            src="../images/meal planning.png"
+            alt="Avocado Toast"
+            class="recipe-list-img"
+          />
+          <div class="recipe-list-info">
+            <h3>Avocado &amp; Egg Toast</h3>
+            <p>A quick and healthy breakfast to start your day right.</p>
+            <div class="recipe-list-macros">
+              <span>380 cal</span>
+              <span>18g protein</span>
+              <span>32g carbs</span>
+              <span>20g fat</span>
+            </div>
+            <span class="recipe-expand-btn">View Recipe ↓</span>
+          </div>
+        </div>
+        <div class="recipe-detail">
+          <h4>Ingredients</h4>
+          <p>
+            2 slices whole grain bread, 1 ripe avocado, 2 eggs, lemon juice, red
+            pepper flakes, salt and pepper.
+          </p>
+          <h4>Instructions</h4>
+          <p>
+            1. Toast bread. 2. Mash avocado with lemon juice, salt, and pepper.
+            3. Fry or poach eggs to your liking. 4. Spread avocado on toast and
+            top with eggs and red pepper flakes.
+          </p>
         </div>
       </div>
 
-      <div class="recipe-list-card">
-        <div class="recipe-list-info">
-          <h3>Avocado & Egg Toast</h3>
-          <p>A quick and healthy breakfast to start your day right.</p>
-          <div class="recipe-list-macros">
-            <span>380 cal</span>
-            <span>18g protein</span>
-            <span>32g carbs</span>
-            <span>20g fat</span>
+      <!-- Recipe 3 -->
+      <div class="recipe-list-card" onclick="toggleRecipe(this)">
+        <div class="recipe-list-main">
+          <img
+            src="../images/macro log.png"
+            alt="Greek Yogurt Parfait"
+            class="recipe-list-img"
+          />
+          <div class="recipe-list-info">
+            <h3>Greek Yogurt Parfait</h3>
+            <p>Creamy yogurt layered with berries and granola.</p>
+            <div class="recipe-list-macros">
+              <span>290 cal</span>
+              <span>20g protein</span>
+              <span>35g carbs</span>
+              <span>6g fat</span>
+            </div>
+            <span class="recipe-expand-btn">View Recipe ↓</span>
           </div>
+        </div>
+        <div class="recipe-detail">
+          <h4>Ingredients</h4>
+          <p>
+            1 cup plain Greek yogurt, 1/3 cup granola, 1/2 cup mixed berries
+            (strawberries, blueberries), 1 tsp honey.
+          </p>
+          <h4>Instructions</h4>
+          <p>
+            1. Add yogurt to a bowl or glass. 2. Layer with granola and berries.
+            3. Drizzle with honey. Serve immediately.
+          </p>
         </div>
       </div>
 
-      <div class="recipe-list-card">
-        <div class="recipe-list-info">
-          <h3>Greek Yogurt Parfait</h3>
-          <p>Creamy yogurt layered with berries and granola.</p>
-          <div class="recipe-list-macros">
-            <span>290 cal</span>
-            <span>20g protein</span>
-            <span>35g carbs</span>
-            <span>6g fat</span>
+      <!-- Recipe 4 -->
+      <div class="recipe-list-card" onclick="toggleRecipe(this)">
+        <div class="recipe-list-main">
+          <img
+            src="../images/recipes.png"
+            alt="Salmon Quinoa"
+            class="recipe-list-img"
+          />
+          <div class="recipe-list-info">
+            <h3>Salmon &amp; Quinoa Plate</h3>
+            <p>Omega-3 rich salmon served over fluffy quinoa with greens.</p>
+            <div class="recipe-list-macros">
+              <span>480 cal</span>
+              <span>42g protein</span>
+              <span>30g carbs</span>
+              <span>18g fat</span>
+            </div>
+            <span class="recipe-expand-btn">View Recipe ↓</span>
           </div>
         </div>
-      </div>
-
-      <div class="recipe-list-card">
-        <div class="recipe-list-info">
-          <h3>Salmon & Quinoa Plate</h3>
-          <p>Omega-3 rich salmon ser</p>
+        <div class="recipe-detail">
+          <h4>Ingredients</h4>
+          <p>
+            5 oz salmon fillet, 3/4 cup cooked quinoa, 1 cup spinach, 1 lemon, 1
+            tbsp olive oil, salt, dill.
+          </p>
+          <h4>Instructions</h4>
+          <p>
+            1. Season salmon with salt, dill, and lemon juice. Bake at 400°F for
+            12-15 min. 2. Cook quinoa per package. 3. Serve salmon over quinoa
+            with fresh spinach and a lemon wedge.
+          </p>
         </div>
       </div>
     </section>
+    <script src="js/script.js"></script>
   </body>
 </html>
