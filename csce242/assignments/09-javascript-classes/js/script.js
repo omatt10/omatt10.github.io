@@ -48,7 +48,7 @@ const songs = [
         1998,
         "Folk Music",
         "images/two-headed-boy.jpg",
-        "2v4LKZS1wDQ"
+        "Azq0eirPXQE"
     ),
     new Song(
         "Jailhouse Rock",
@@ -57,7 +57,7 @@ const songs = [
         1957,
         "Rock and Roll",
         "images/jailhouse-rock.webp",
-        "gj0Rz-uP4Mk"
+        "nWyO27J3LaM"
     ),
     new Song(
         "So What",
@@ -66,7 +66,7 @@ const songs = [
         1959,
         "Jazz",
         "images/so-what.webp",
-        "ylXk1LBvIqU"
+        "s71I_EWJk7I"
     ),
     new Song(
         "Jolene",
@@ -75,7 +75,7 @@ const songs = [
         1973,
         "Country",
         "images/jolene.webp",
-        "Ixrje2rXLMA"
+        "GFPlF6rXnik"
     ),
 ];
 //reder gallery
