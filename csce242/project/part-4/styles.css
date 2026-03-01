@@ -791,8 +791,14 @@ header {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-5px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Gallery Section */
@@ -845,7 +851,7 @@ header {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(transparent, rgba(0,0,0,0.65));
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.65));
   color: white;
   padding: 20px 15px 12px;
   opacity: 0;
@@ -891,7 +897,7 @@ header {
   max-height: 75vh;
   object-fit: contain;
   border-radius: 8px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
 #lightbox-caption {
@@ -922,7 +928,7 @@ header {
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
   border: none;
   color: white;
   font-size: 28px;
@@ -933,12 +939,16 @@ header {
   z-index: 1001;
 }
 
-.lightbox-prev { left: 20px; }
-.lightbox-next { right: 20px; }
+.lightbox-prev {
+  left: 20px;
+}
+.lightbox-next {
+  right: 20px;
+}
 
 .lightbox-prev:hover,
 .lightbox-next:hover {
-  background: rgba(255,255,255,0.3);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 /* Running Page */
@@ -1171,41 +1181,44 @@ header {
     gap: 10px;
   }
 
-  .form-row { 
-    grid-template-columns: 1fr; 
+  .form-row {
+    grid-template-columns: 1fr;
   }
 
-  .gallery-grid { 
+  .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .recipe-list-main { 
+  .recipe-list-main {
     flex-direction: column;
   }
 
-  .recipe-list-img { 
-    width: 100%; height: 180px; 
+  .recipe-list-img {
+    width: 100%;
+    height: 180px;
   }
 
-  .tracker-wrapper { 
-    grid-template-columns: 1fr; gap: 30px; 
+  .tracker-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
-  .tips-grid { 
+  .tips-grid {
     grid-template-columns: 1fr;
   }
-  .tips-section { 
-    padding: 0 20px; margin: 40px auto; 
+  .tips-section {
+    padding: 0 20px;
+    margin: 40px auto;
   }
 
-  .gallery-section { 
+  .gallery-section {
     padding: 0 20px;
   }
 
-  .lightbox-prev { 
+  .lightbox-prev {
     left: 5px;
   }
 
-  .lightbox-next { 
+  .lightbox-next {
     right: 5px;
   }
 }
