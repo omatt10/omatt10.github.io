@@ -67,13 +67,10 @@ nav a {
   text-decoration: none;
   color: var(--gray);
   font-size: 15px;
-  border-bottom: 2px solid transparent; 
-  padding-bottom: 4px;
 }
 
-nav a:hover,nav a.active {
+nav a:hover {
   color: var(--blue);
-  border-bottom-color: var(--blue);
 }
 
 /* Nav Toggle Button */
@@ -334,7 +331,6 @@ nav a:hover,nav a.active {
   text-align: center;
   padding: 60px 20px 40px;
   background: var(--light-blue);
-  border-bottom: 3px solid var(--border);
   width: 100%;
 }
 
@@ -963,10 +959,6 @@ header {
   align-items: start;
 }
 
-.tracker-section {
-  margin: 60px auto 50px;
-}
-
 .tracker-form {
   background: var(--white);
   border: 1px solid var(--border);
@@ -1042,7 +1034,6 @@ header {
   max-width: 1200px;
   margin: 0 auto 60px;
   padding: 0 50px;
-  margin-top: 50px;
 }
 
 .tips-section h2 {
@@ -1229,5 +1220,414 @@ header {
 
   .lightbox-next {
     right: 5px;
+  }
+}
+
+/* ============================================
+   PART 7 NEW STYLES
+   ============================================ */
+
+/* ── JSON Recipe Grid ── */
+.recipe-json-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 50px;
+}
+
+.recipe-json-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.recipe-json-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.recipe-json-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-json-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.recipe-json-body {
+  padding: 18px 20px 22px;
+}
+
+.recipe-json-badge {
+  display: inline-block;
+  background: var(--light-blue);
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.recipe-json-body h3 {
+  font-size: 16px;
+  color: var(--black);
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.recipe-json-body > p {
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.recipe-json-macros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.recipe-json-macros span {
+  font-size: 12px;
+  background: var(--light-gray);
+  border-radius: 6px;
+  padding: 3px 8px;
+  color: var(--gray);
+}
+
+.recipe-json-macros span strong {
+  color: var(--black);
+}
+
+.recipe-json-time {
+  font-size: 12px;
+  color: var(--gray);
+}
+
+.json-loading {
+  text-align: center;
+  color: var(--gray);
+  padding: 40px;
+  font-size: 15px;
+  grid-column: 1 / -1;
+}
+
+.json-error {
+  text-align: center;
+  color: #c0392b;
+  padding: 30px;
+  font-size: 15px;
+  grid-column: 1 / -1;
+  background: #fdf3f3;
+  border-radius: 10px;
+  border: 1px solid #f5c6c6;
+}
+
+/* ── Contact Page ── */
+.contact-section {
+  max-width: 1200px;
+  margin: 60px auto 70px;
+  padding: 0 50px;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contact-form-box,
+.contact-info-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 36px 40px;
+}
+
+.contact-form-box h2,
+.contact-info-box h2 {
+  font-size: 22px;
+  color: var(--black);
+  margin-bottom: 6px;
+}
+
+.contact-form-box > p,
+.contact-info-box > p {
+  font-size: 14px;
+  color: var(--gray);
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+.contact-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.contact-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.contact-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 7px;
+}
+
+.required-star {
+  color: #e74c3c;
+}
+
+.contact-field input,
+.contact-field textarea {
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  color: var(--black);
+  transition: border-color 0.2s;
+  resize: vertical;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+}
+
+.contact-form-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.contact-submit-btn {
+  background: var(--blue);
+  color: var(--white);
+  padding: 13px 32px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.contact-submit-btn:hover:not(:disabled) {
+  background: var(--dark-blue);
+}
+
+.contact-submit-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.form-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.form-success {
+  background: #eafaf1;
+  border: 1px solid #a9dfbf;
+  color: #1e8449;
+}
+
+.form-error {
+  background: #fdedec;
+  border: 1px solid #f5b7b1;
+  color: #c0392b;
+}
+
+.msg-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.contact-info-icon {
+  font-size: 22px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.contact-info-item strong {
+  display: block;
+  font-size: 14px;
+  color: var(--black);
+  margin-bottom: 2px;
+}
+
+.contact-info-item p {
+  font-size: 13px;
+  color: var(--gray);
+  margin: 0;
+}
+
+.contact-map {
+  margin-top: 28px;
+  border-top: 1px solid var(--border);
+  padding-top: 22px;
+}
+
+.contact-map h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 14px;
+}
+
+.iframe-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 65%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* ── Site Footer ── */
+.site-footer {
+  background: var(--black);
+  color: #ccc;
+  padding: 40px 50px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--white);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.footer-brand p {
+  font-size: 13px;
+  color: #999;
+}
+
+.site-footer .footer-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.site-footer .footer-links a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+  border-bottom: none !important;
+}
+
+.site-footer .footer-links a:hover {
+  color: var(--blue);
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: #666;
+}
+
+/* ── Part 7 Responsive ── */
+@media (max-width: 1024px) {
+  .recipe-json-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  #main-nav a {
+    border-bottom: none !important;
+    padding-bottom: 0;
+  }
+
+  .tracker-section {
+    padding: 0 20px;
+    margin: 40px auto;
+  }
+
+  .recipe-json-section {
+    padding: 0 20px;
+    margin: 40px auto;
+  }
+
+  .recipe-json-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-section {
+    padding: 0 20px;
+    margin: 40px auto 50px;
+  }
+
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-box,
+  .contact-info-box {
+    padding: 24px 20px;
+  }
+
+  .contact-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer {
+    padding: 30px 20px;
+  }
+
+  .site-footer .footer-links {
+    gap: 16px;
   }
 }
