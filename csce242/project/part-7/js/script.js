@@ -137,3 +137,121 @@ function toggleRecipe(card) {
   detail.classList.toggle("open");
   if (btn) btn.textContent = isOpen ? "View Recipe ↓" : "Hide Recipe ↑";
 }
+
+// JSON Recipe Loader
+// Runs only on pages that have the recipe container div
+if (document.getElementById("recipe-json-container")) {
+  loadRecipesFromJSON();
+}
+ 
+// IMPORTANT: After pushing to GitHub Pages, this URL should be:
+// https://omatt10.github.io/csce242/project/part-7/json/recipes.json
+// You cannot test this locally — it must be fetched from GitHub Pages
+// or you will get a CORS error.
+async function loadRecipesFromJSON() {
+  const container = document.getElementById("recipe-json-container");
+  const JSON_URL =
+    "https://omatt10.github.io/csce242/project/part-7/json/recipes.json";
+ 
+  container.innerHTML = '<p class="json-loading">Loading recipes...</p>';
+ 
+  try {
+    const response = await fetch(JSON_URL);
+    if (!response.ok) throw new Error("Failed to fetch");
+    const recipes = await response.json();
+    renderRecipes(recipes, container);
+  } catch (err) {
+    container.innerHTML =
+      '<p class="json-error"> Could not load recipes. Make sure the JSON file is published on GitHub Pages and the URL in script.js is correct.</p>';
+    console.error("JSON fetch error:", err);
+  }
+}
+ 
+function renderRecipes(recipes, container) {
+  container.innerHTML = "";
+  recipes.forEach(function (recipe) {
+    const card = document.createElement("div");
+    card.className = "recipe-json-card";
+    card.innerHTML = `
+      <img
+        src="../${recipe.img_name}"
+        alt="${recipe.name}"
+        class="recipe-json-img"
+        onerror="this.src='../images/recipes.png'"
+      />
+      <div class="recipe-json-body">
+        <span class="recipe-json-badge">${recipe.category}</span>
+        <h3>${recipe.name}</h3>
+        <p>${recipe.description}</p>
+        <div class="recipe-json-macros">
+          <span><strong>${recipe.calories}</strong> cal</span>
+          <span><strong>${recipe.protein}g</strong> protein</span>
+          <span><strong>${recipe.carbs}g</strong> carbs</span>
+          <span><strong>${recipe.fat}g</strong> fat</span>
+        </div>
+        <p class="recipe-json-time">⏱ Prep: ${recipe.prep_time}</p>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+}
+ 
+// Contact Form
+// Runs only on pages that have the contact form
+const contactForm = document.getElementById("contact-form");
+if (contactForm) {
+  contactForm.addEventListener("submit", async function (e) {
+    e.preventDefault();
+ 
+    const successMsg = document.getElementById("form-success");
+    const errorMsg = document.getElementById("form-error");
+    successMsg.style.display = "none";
+    errorMsg.style.display = "none";
+ 
+    // HTML5 validation check
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      return;
+    }
+ 
+    const submitBtn = contactForm.querySelector(".contact-submit-btn");
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
+ 
+    try {
+      // Uses FormSubmit.co — replace YOUR_EMAIL below with your real email.
+      // The very first submission will send you a confirmation email from
+      // FormSubmit asking you to activate. After that it works automatically.
+      const response = await fetch(
+        "https://formsubmit.co/ajax/YOUR_EMAIL@example.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: document.getElementById("contact-name").value,
+            email: document.getElementById("contact-email").value,
+            subject: document.getElementById("contact-subject").value,
+            message: document.getElementById("contact-message").value,
+          }),
+        }
+      );
+ 
+      const data = await response.json();
+      if (data.success === "true" || response.ok) {
+        successMsg.style.display = "flex";
+        contactForm.reset();
+      } else {
+        throw new Error("Submission failed");
+      }
+    } catch (err) {
+      errorMsg.style.display = "flex";
+    } finally {
+      submitBtn.textContent = "Send Message";
+      submitBtn.disabled = false;
+    }
+  });
+}
+ 

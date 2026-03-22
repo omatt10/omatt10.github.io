@@ -67,10 +67,13 @@ nav a {
   text-decoration: none;
   color: var(--gray);
   font-size: 15px;
+  border-bottom: 2px solid transparent; 
+  padding-bottom: 4px;
 }
 
-nav a:hover {
+nav a:hover,nav a.active {
   color: var(--blue);
+  border-bottom-color: var(--blue);
 }
 
 /* Nav Toggle Button */
@@ -331,6 +334,7 @@ nav a:hover {
   text-align: center;
   padding: 60px 20px 40px;
   background: var(--light-blue);
+  border-bottom: 3px solid var(--border);
   width: 100%;
 }
 
@@ -959,6 +963,10 @@ header {
   align-items: start;
 }
 
+.tracker-section {
+  margin: 60px auto 50px;
+}
+
 .tracker-form {
   background: var(--white);
   border: 1px solid var(--border);
@@ -1034,6 +1042,7 @@ header {
   max-width: 1200px;
   margin: 0 auto 60px;
   padding: 0 50px;
+  margin-top: 50px;
 }
 
 .tips-section h2 {
