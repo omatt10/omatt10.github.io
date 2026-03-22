@@ -8,7 +8,6 @@ if (navToggle && mainNav) {
     navToggle.classList.toggle("active");
   });
 
-  // Close nav when a link is clicked
   mainNav.querySelectorAll("a").forEach(function (link) {
     link.addEventListener("click", function () {
       mainNav.classList.remove("open");
@@ -62,8 +61,7 @@ function calculateCalories() {
 const galleryImages = [];
 let currentIndex = 0;
 
-// Collect all gallery items on page load
-document.querySelectorAll(".gallery-item").forEach(function (item, idx) {
+document.querySelectorAll(".gallery-item").forEach(function (item) {
   const img = item.querySelector("img");
   const caption = item.querySelector(".gallery-overlay span");
   galleryImages.push({
@@ -76,17 +74,11 @@ function openLightbox(src, caption) {
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
   const lightboxCaption = document.getElementById("lightbox-caption");
-
   if (!lightbox) return;
-
-  // Find index of clicked image
   currentIndex = galleryImages.findIndex(function (item) {
-    return (
-      item.src.includes(src.replace("../", "")) || item.caption === caption
-    );
+    return item.src.includes(src.replace("../", "")) || item.caption === caption;
   });
   if (currentIndex === -1) currentIndex = 0;
-
   lightboxImg.src = src;
   lightboxImg.alt = caption;
   lightboxCaption.textContent = caption;
@@ -97,12 +89,7 @@ function openLightbox(src, caption) {
 function closeLightbox(event) {
   const lightbox = document.getElementById("lightbox");
   if (!lightbox) return;
-  // Close only if clicking the backdrop or close button (not the image)
-  if (
-    !event ||
-    event.target === lightbox ||
-    event.target.classList.contains("lightbox-close")
-  ) {
+  if (!event || event.target === lightbox || event.target.classList.contains("lightbox-close")) {
     lightbox.classList.remove("active");
     document.body.style.overflow = "";
   }
@@ -110,15 +97,13 @@ function closeLightbox(event) {
 
 function changeImage(direction) {
   if (galleryImages.length === 0) return;
-  currentIndex =
-    (currentIndex + direction + galleryImages.length) % galleryImages.length;
+  currentIndex = (currentIndex + direction + galleryImages.length) % galleryImages.length;
   const item = galleryImages[currentIndex];
   document.getElementById("lightbox-img").src = item.src;
   document.getElementById("lightbox-img").alt = item.caption;
   document.getElementById("lightbox-caption").textContent = item.caption;
 }
 
-// Keyboard support for lightbox
 document.addEventListener("keydown", function (e) {
   const lightbox = document.getElementById("lightbox");
   if (!lightbox || !lightbox.classList.contains("active")) return;
@@ -132,41 +117,33 @@ function toggleRecipe(card) {
   const detail = card.querySelector(".recipe-detail");
   const btn = card.querySelector(".recipe-expand-btn");
   if (!detail) return;
-
   const isOpen = detail.classList.contains("open");
   detail.classList.toggle("open");
   if (btn) btn.textContent = isOpen ? "View Recipe ↓" : "Hide Recipe ↑";
 }
 
+// ============================================
+// PART 7 ADDITIONS
+// ============================================
+
 // JSON Recipe Loader
-// Runs only on pages that have the recipe container div
-if (document.getElementById("recipe-json-container")) {
-  loadRecipesFromJSON();
-}
- 
-// IMPORTANT: After pushing to GitHub Pages, this URL should be:
-// https://omatt10.github.io/csce242/project/part-7/json/recipes.json
-// You cannot test this locally — it must be fetched from GitHub Pages
-// or you will get a CORS error.
 async function loadRecipesFromJSON() {
   const container = document.getElementById("recipe-json-container");
-  const JSON_URL =
-    "https://omatt10.github.io/csce242/project/part-7/json/recipes.json";
- 
+  const JSON_URL = "https://omatt10.github.io/csce242/project/part-7/json/recipes.json";
+
   container.innerHTML = '<p class="json-loading">Loading recipes...</p>';
- 
+
   try {
     const response = await fetch(JSON_URL);
     if (!response.ok) throw new Error("Failed to fetch");
     const recipes = await response.json();
     renderRecipes(recipes, container);
   } catch (err) {
-    container.innerHTML =
-      '<p class="json-error"> Could not load recipes. Make sure the JSON file is published on GitHub Pages and the URL in script.js is correct.</p>';
+    container.innerHTML = '<p class="json-error">⚠️ Could not load recipes. Make sure the JSON file is published on GitHub Pages and the URL in script.js is correct.</p>';
     console.error("JSON fetch error:", err);
   }
 }
- 
+
 function renderRecipes(recipes, container) {
   container.innerHTML = "";
   recipes.forEach(function (recipe) {
@@ -195,33 +172,33 @@ function renderRecipes(recipes, container) {
     container.appendChild(card);
   });
 }
- 
+
+// Call AFTER the function is defined
+if (document.getElementById("recipe-json-container")) {
+  loadRecipesFromJSON();
+}
+
 // Contact Form
-// Runs only on pages that have the contact form
 const contactForm = document.getElementById("contact-form");
 if (contactForm) {
   contactForm.addEventListener("submit", async function (e) {
     e.preventDefault();
- 
+
     const successMsg = document.getElementById("form-success");
     const errorMsg = document.getElementById("form-error");
     successMsg.style.display = "none";
     errorMsg.style.display = "none";
- 
-    // HTML5 validation check
+
     if (!contactForm.checkValidity()) {
       contactForm.reportValidity();
       return;
     }
- 
+
     const submitBtn = contactForm.querySelector(".contact-submit-btn");
     submitBtn.textContent = "Sending...";
     submitBtn.disabled = true;
- 
+
     try {
-      // Uses FormSubmit.co — replace YOUR_EMAIL below with your real email.
-      // The very first submission will send you a confirmation email from
-      // FormSubmit asking you to activate. After that it works automatically.
       const response = await fetch(
         "https://formsubmit.co/ajax/YOUR_EMAIL@example.com",
         {
@@ -238,7 +215,7 @@ if (contactForm) {
           }),
         }
       );
- 
+
       const data = await response.json();
       if (data.success === "true" || response.ok) {
         successMsg.style.display = "flex";
@@ -254,4 +231,3 @@ if (contactForm) {
     }
   });
 }
- 
