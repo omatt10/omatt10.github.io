@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Exercise - Core Metrics</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <a href="index.html" class="logo">
+        <img src="../images/logo.png" alt="Logo" />
+        <span>Core Metrics</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="exercise.html" class="active">Exercise</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="about.html">About Us</a>
+      </nav>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-header">
+      <h1>Exercise Activities</h1>
+      <p>Track your workouts and activities</p>
+    </section>
+
+    <!-- Exercise Grid -->
+    <section class="exercise-grid">
+      <a href="running-preview.html" class="exercise-card-link">
+        <div class="exercise-card">
+          <img
+            src="../images/running.webp"
+            alt="Running"
+            class="exercise-image"
+          />
+          <div class="exercise-card-footer">
+            <h3>Running</h3>
+          </div>
+        </div>
+      </a>
+      <div class="exercise-card">
+        <img
+          src="../images/walking.webp"
+          alt="Walking"
+          class="exercise-image"
+        />
+        <h3>Walking</h3>
+      </div>
+      <div class="exercise-card">
+        <img
+          src="../images/swimming.png"
+          alt="Swimming"
+          class="exercise-image"
+        />
+        <h3>Swimming</h3>
+      </div>
+      <div class="exercise-card">
+        <img
+          src="../images/othercardio.png"
+          alt="Other Cardio"
+          class="exercise-image"
+        />
+        <h3>Other Cardio</h3>
+      </div>
+    </section>
+    <!-- Lightbox Gallery Section -->
+    <section class="gallery-section">
+      <h2>Workout Gallery</h2>
+      <p>Click any image to view it in full screen</p>
+      <div class="gallery-grid">
+        <div
+          class="gallery-item"
+          onclick="openLightbox('../images/running.webp', 'Running')"
+        >
+          <img src="../images/running.webp" alt="Running" />
+          <div class="gallery-overlay"><span>Running</span></div>
+        </div>
+        <div
+          class="gallery-item"
+          onclick="openLightbox('../images/walking.webp', 'Walking')"
+        >
+          <img src="../images/walking.webp" alt="Walking" />
+          <div class="gallery-overlay"><span>Walking</span></div>
+        </div>
+        <div
+          class="gallery-item"
+          onclick="openLightbox('../images/swimming.png', 'Swimming')"
+        >
+          <img src="../images/swimming.png" alt="Swimming" />
+          <div class="gallery-overlay"><span>Swimming</span></div>
+        </div>
+        <div
+          class="gallery-item"
+          onclick="openLightbox('../images/othercardio.png', 'Other Cardio')"
+        >
+          <img src="../images/othercardio.png" alt="Other Cardio" />
+          <div class="gallery-overlay"><span>Other Cardio</span></div>
+        </div>
+        <div
+          class="gallery-item"
+          onclick="openLightbox('../images/bodyMassIndex.webp', 'BMI Tracking')"
+        >
+          <img src="../images/bodyMassIndex.webp" alt="BMI Tracking" />
+          <div class="gallery-overlay"><span>BMI Tracking</span></div>
+        </div>
+        <div
+          class="gallery-item"
+          onclick="openLightbox('../images/BMR.webp', 'BMR Monitoring')"
+        >
+          <img src="../images/BMR.webp" alt="BMR Monitoring" />
+          <div class="gallery-overlay"><span>BMR Monitoring</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+      <div class="lightbox-content">
+        <button class="lightbox-close" onclick="closeLightbox()">
+          &times;
+        </button>
+        <button class="lightbox-prev" onclick="changeImage(-1)">
+          &#10094;
+        </button>
+        <img id="lightbox-img" src="" alt="" />
+        <p id="lightbox-caption"></p>
+        <button class="lightbox-next" onclick="changeImage(1)">&#10095;</button>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
