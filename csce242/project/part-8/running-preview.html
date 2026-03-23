@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Running - Core Metrics</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <a href="index.html" class="logo">
+        <img src="../images/logo.png" alt="Logo" />
+        <span>Core Metrics</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="exercise.html" class="active">Exercise</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="about.html">About Us</a>
+      </nav>
+    </header>
+
+    <!-- Page Header -->
+     <!-- Addressing the feedback -->
+    <section class="page-header">
+      <h1>Running</h1>
+      <p>Calculate your calories burned and track your stats</p>
+    </section>
+
+    <section class="tracker-section">
+      <div class="tracker-wrapper">
+        <div class="tracker-form">
+          <h2>Calculate Calories Burned</h2>
+          <p>
+            Enter your details below to estimate calories burned while running.
+          </p>
+
+          <div class="form-group">
+            <label>Weight (lbs)</label>
+            <input type="number" id="weight" placeholder="e.g. 160" />
+          </div>
+          <div class="form-group">
+            <label>Duration (minutes)</label>
+            <input type="number" id="duration" placeholder="e.g. 30" />
+          </div>
+          <div class="form-group">
+            <label>Pace</label>
+            <select id="pace">
+              <option value="6">Slow jog (5 mph)</option>
+              <option value="9" selected>Moderate run (6 mph)</option>
+              <option value="11">Fast run (7.5 mph)</option>
+              <option value="13">Sprint (9+ mph)</option>
+            </select>
+          </div>
+
+          <button class="calculate-btn" onclick="calculateCalories()">
+            Calculate
+          </button>
+        </div>
+
+        <div class="tracker-results">
+          <h2>Your Stats</h2>
+          <div class="stat-card">
+            <div class="stat-icon"></div>
+            <div class="stat-info">
+              <div class="stat-number" id="calories-result">--</div>
+              <div class="stat-label">Calories Burned</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"></div>
+            <div class="stat-info">
+              <div class="stat-number" id="duration-result">--</div>
+              <div class="stat-label">Minutes Running</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"></div>
+            <div class="stat-info">
+              <div class="stat-number" id="distance-result">--</div>
+              <div class="stat-label">Miles Covered</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"></div>
+            <div class="stat-info">
+              <div class="stat-number" id="pace-result">--</div>
+              <div class="stat-label">Pace Level</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tips-section">
+      <h2>Running Tips</h2>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <h3>Warm Up First</h3>
+          <p>
+            Always spend 5 minutes walking or stretching before you pick up the
+            pace to prevent injury.
+          </p>
+        </div>
+        <div class="tip-card">
+          <h3>Stay Hydrated</h3>
+          <p>
+            Drink water before, during, and after your run. Aim for at least 8oz
+            every 20 minutes.
+          </p>
+        </div>
+        <div class="tip-card">
+          <h3>Build Gradually</h3>
+          <p>
+            Increase your weekly mileage by no more than 10% to avoid
+            overtraining and burnout.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="footer-logo">Core Metrics</span>
+          <p>Track progress. See change.</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="calculator.html">Calculator</a>
+          <a href="exercise.html">Exercise</a>
+          <a href="nutrition.html">Nutrition</a>
+          <a href="contact.html">Contact</a>
+          <a href="about.html">About</a>
+        </div>
+        <p class="footer-copy">&copy; 2025 Core Metrics. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

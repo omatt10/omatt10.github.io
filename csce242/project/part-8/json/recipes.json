@@ -1,0 +1,129 @@
+[
+  {
+    "_id": 1,
+    "name": "Grilled Chicken & Veggie Bowl",
+    "category": "High Protein",
+    "calories": 520,
+    "protein": 45,
+    "carbs": 38,
+    "fat": 14,
+    "prep_time": "25 min",
+    "description": "A high-protein bowl perfect for post-workout recovery.",
+    "img_name": "images/recipes.png"
+  },
+
+  {
+    "_id": 2,
+    "name": "Avocado & Egg Toast",
+    "category": "Breakfast",
+    "calories": 380,
+    "protein": 18,
+    "carbs": 32,
+    "fat": 20,
+    "prep_time": "10 min",
+    "description": "A quick and healthy breakfast to start your day right.",
+    "img_name": "images/meal planning.png"
+  },
+
+  {
+    "_id": 3,
+    "name": "Greek Yogurt Parfait",
+    "category": "Snack",
+    "calories": 290,
+    "protein": 20,
+    "carbs": 35,
+    "fat": 6,
+    "prep_time": "5 min",
+    "description": "Creamy yogurt layered with berries and granola.",
+    "img_name": "images/macro log.png"
+  },
+
+  {
+    "_id": 4,
+    "name": "Salmon & Quinoa Plate",
+    "category": "Omega-3 Rich",
+    "calories": 480,
+    "protein": 42,
+    "carbs": 30,
+    "fat": 18,
+    "prep_time": "30 min",
+    "description": "Omega-3 rich salmon served over fluffy quinoa with greens.",
+    "img_name": "images/recipes.png"
+  },
+
+  {
+    "_id": 5,
+    "name": "Turkey & Spinach Wrap",
+    "category": "Lunch",
+    "calories": 410,
+    "protein": 35,
+    "carbs": 40,
+    "fat": 10,
+    "prep_time": "10 min",
+    "description": "A lean, filling wrap loaded with turkey and fresh greens.",
+    "img_name": "images/meal planning.png"
+  },
+
+  {
+    "_id": 6,
+    "name": "Overnight Oats",
+    "category": "Breakfast",
+    "calories": 350,
+    "protein": 15,
+    "carbs": 55,
+    "fat": 8,
+    "prep_time": "5 min",
+    "description": "Make-ahead oats packed with fiber and natural energy.",
+    "img_name": "images/macro log.png"
+  },
+
+  {
+    "_id": 7,
+    "name": "Lentil Veggie Soup",
+    "category": "Plant-Based",
+    "calories": 310,
+    "protein": 18,
+    "carbs": 45,
+    "fat": 5,
+    "prep_time": "35 min",
+    "description": "A warm, hearty soup full of plant protein and fiber.",
+    "img_name": "images/recipes.png"
+  },
+
+  {
+    "_id": 8,
+    "name": "Protein Smoothie",
+    "category": "Post-Workout",
+    "calories": 280,
+    "protein": 30,
+    "carbs": 28,
+    "fat": 5,
+    "prep_time": "5 min",
+    "description": "A fast recovery smoothie with banana, protein powder, and almond milk.",
+    "img_name": "images/meal planning.png"
+  },
+  {
+    "_id": 9,
+    "name": "Tuna Stuffed Peppers",
+    "category": "Low Carb",
+    "calories": 340,
+    "protein": 36,
+    "carbs": 18,
+    "fat": 12,
+    "prep_time": "20 min",
+    "description": "Bell peppers stuffed with seasoned tuna and topped with cheese.",
+    "img_name": "images/macro log.png"
+  },
+  {
+    "_id": 10,
+    "name": "Sweet Potato & Black Bean Bowl",
+    "category": "Plant-Based",
+    "calories": 430,
+    "protein": 16,
+    "carbs": 62,
+    "fat": 11,
+    "prep_time": "30 min",
+    "description": "A colorful, nutrient-dense bowl packed with complex carbs.",
+    "img_name": "images/recipes.png"
+  }
+]
